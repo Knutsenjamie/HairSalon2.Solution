@@ -25,7 +25,7 @@ namespace HairSalon
       services.AddMvc();
 
       services.AddEntityFrameworkMySql()
-        .AddDbContext<ToDoListContext>(options => options
+        .AddDbContext<HairSalonContext>(options => options
         .UseMySql(Configuration["ConnectionStrings:DefaultConnection"], ServerVersion.AutoDetect(Configuration["ConnectionStrings:DefaultConnection"])));
     }
 
@@ -43,7 +43,7 @@ namespace HairSalon
       
       app.Run(async (context) =>
       {
-        await context.Response.WriteAsync("Yo");
+        await context.Response.WriteAsync("Whooooops");
       });
     }
   }
