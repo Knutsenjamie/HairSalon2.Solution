@@ -48,8 +48,15 @@ https://github.com/Knutsenjamie/HairSalon2.Solution
 6. To install and make sure all needed packages are up-to-date, navigate into the HairSalon folder from root directory by entering 'cd HairSalon' in terminal.
     * Type the command 'dotnet restore' to update and restore all needed packages and dependencies to run application.
 7.  To recreate the jamie_knutsen database used, 
-8. In order to use the database, run the command 'touch appsettings.json' in the root directory of the project. 
-    * 
+8. In order to use the database, run the command 'touch appsettings.json' in the HairSalon directory of the project. 
+    * The, enter in your own approppriate username (or enter 'root' in the YOUR-USERNAME-HERE field), and whichever password you used to open, use, and create the imported database in MySQL Workbench- use it and enter it as follows in this line 'database=jamie_knutsen;uid=[YOUR-USERNAME-HERE];pwd=[YOUR-PASSWORD-HERE]' *do NOT actually put []- this is just for visual purposes to see where to change the information*
+    * Finally, copy it like in this example, 
+    '{
+    "ConnectionStrings": {
+      "DefaultConnection": "Server=localhost;Port=3306;database=jamie_knutsen;uid=[YOUR-USERNAME-HERE];pwd=[YOUR-PASSWORD-HERE];"
+    }
+    } 
+    and paste it into the appsettings.json to use the database. *WARNING: This file should automatically be ignored AS LONG AS it is in the HairSalon directory and NOT the root directory (as it is listed in the .gitignore). However, Be aware of what you are committing and pushing to avoid pushing your personal username and password- as it is sensitive data* Your database should now be connected. 
 9. Navigate into root directory folder in terminal 'cd HairSalon2.Solution' and  enter command 'dotnet run' or 'dotnet watch run' to run the program. 
 
 ## Licensing
