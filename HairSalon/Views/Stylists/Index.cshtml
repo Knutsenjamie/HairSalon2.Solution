@@ -18,7 +18,7 @@ else
     {
         <li>@stylist.Name</li>
         <ul>
-        <em>@stylist.Details | Currently Has These Clients: @stylist.Client.Name</em>
+        <em>@Html.ActionLink($"{stylist.Details}", "Details", new { id = stylist.StylistId }) | Currently Has These Clients: @stylist.Client.Name</em> 
         </ul>
         <br>
     }
